@@ -4,7 +4,7 @@ import Card from './Card'
 const Projects = () => {
     return (
         <>
-            <div className="h-screen w-full flex justify-center items-start xm:px-2">
+            <div className="h-full w-full flex justify-center items-start xm:px-2">
                 <div className="flex flex-col gap-2 items-center">
                     <div className="flex flex-col relative justify-center items-center">
                         <h1 className='leading-[2.4rem] md:leading-[3.85rem] xm:text-2xl text-3xl md:text-4xl'>
