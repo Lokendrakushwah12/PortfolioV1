@@ -1,8 +1,8 @@
 {
     "name": "@pixaui/button-v2",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "button-v2 Component",
-    "main": "ButtonV2.jsx",
+    "main": "buttonv2.jsx",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
       "postinstall": "node copy-file.js"
