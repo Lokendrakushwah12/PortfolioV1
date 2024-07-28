@@ -1,4 +1,5 @@
 import ButtonV1 from "@pixaui/button-v1";
+import ButtonV2 from "@pixaui/button-v2";
 import React from "react";
 
 const Card = ({ title, description, url }) => {
@@ -19,6 +20,7 @@ const Card = ({ title, description, url }) => {
         </div>
         <div className="flex py-2">
           <ButtonV1 title="Check out" className="text-xl w-[120px]" />
+          <ButtonV2 title="Check out" className="text-xl w-[120px]" />
         </div>
       </div>
     </>
