@@ -1,16 +1,8 @@
 {
     "name": "@pixaui/button-v2",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "button-v2 Component",
     "main": "buttonv2.jsx",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "postinstall": "node copy-file.js"
-    },
-    "files": [
-      "buttonv2.jsx",
-      "copy-file.js"
-    ],
     "author": "Lokendra Kushwah",
     "license": "ISC",
     "dependencies": {
