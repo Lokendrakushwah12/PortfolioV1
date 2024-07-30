@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div className="mx-auto xm:max-w-lg max-w-xl md:max-w-3xl lg:max-w-4xl text-base xm:px-0 px-6 border-x">
+        <div className="mx-auto xm:max-w-lg max-w-xl md:max-w-3xl lg:max-w-4xl text-base xm:px-0 px-6">
           <Nav />
           <Hero />
           <Projects />

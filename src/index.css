@@ -19,7 +19,7 @@ body {
 }
 
 ::selection {
-  background: rgba(5, 154, 255, 0.15);
+  background: #10b20126;
 }
 
 ::-webkit-scrollbar {
