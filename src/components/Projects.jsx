@@ -25,7 +25,6 @@ const cardData = [
 ]
 
 const Projects = () => {
-  
   const [visibleProject, setVisibleProject] = useState(cardData[0].title)
   const projectRefs = useRef([])
 
