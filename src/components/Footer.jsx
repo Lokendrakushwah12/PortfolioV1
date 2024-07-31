@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="flex flex-col">
       <div className="flex justify-between items-center py-4 pt-24 xm:px-2">
-        <h1 className="md:text-6xl font-[400] text-[#212121] leading-5 md:leading-5 text-3xl">
+        <h1 className="md:text-6xl font-[500] text-[#212121]/50 leading-5 md:leading-5 text-3xl">
           Lokendra Kushwah
         </h1>
         <div className="flex flex-col gap-2 p-1  transition-all">

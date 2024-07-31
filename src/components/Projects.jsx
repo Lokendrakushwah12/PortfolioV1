@@ -4,33 +4,42 @@ import Card from './Card'
 import TrackBar from './TrackBar'
 import { AnimatePresence } from 'framer-motion'
 
+// Import logo components
+import Cauldron from '../assets/logo/Cauldron'
+import Pixaui from '../assets/logo/Pixaui'
+import Anubhav from '../assets/logo/Anubhav'
+
 const cardData = [
   {
-    title: 'Project 1',
+    title: 'Cauldron',
     description: 'This is a project',
     url: 'https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?auto=compress&cs=tinysrgb&w=600',
     tags: ['React', 'Tailwind', 'Firebase'],
-    link: 'https://www.google.com',
+    link: 'https:/www.cauldron.live',
+    logo: Cauldron,
   },
   {
-    title: 'very very Big text 2',
+    title: 'Pixa ui',
     description: 'This is a project',
     url: 'https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?auto=compress&cs=tinysrgb&w=600',
     tags: ['React', 'Tailwind', 'Firebase'],
-    link: 'https://www.netflix.com',
+    link: 'https://pixa-ui.vercel.app/',
+    logo: Pixaui,
   },
   {
-    title: 'Project 3',
+    title: 'Anubhav',
     description: 'This is a project',
     url: 'https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?auto=compress&cs=tinysrgb&w=600',
     tags: ['React', 'Tailwind', 'Firebase'],
-    link: 'https://www.amazon.com',
+    link: 'https://anubhav-frontend-23.vercel.app/',
+    logo: Anubhav,
   },
 ]
 
 const Projects = () => {
   const [visibleProject, setVisibleProject] = useState(cardData[0].title)
   const [link, setLink] = useState(cardData[0].link)
+  const [logo, setLogo] = useState(cardData[0].logo)
   const [showTrackBar, setShowTrackBar] = useState(true)
   const projectRefs = useRef([])
 
@@ -46,9 +55,12 @@ const Projects = () => {
         if (entry.isIntersecting) {
           const projectTitle = entry.target.getAttribute('data-title')
           setVisibleProject(projectTitle)
-          // Update the link based on the visible project
+          // Update the link and logo based on the visible project
           const project = cardData.find((p) => p.title === projectTitle)
-          if (project) setLink(project.link)
+          if (project) {
+            setLink(project.link)
+            setLogo(project.logo)
+          }
         }
       })
     }
@@ -110,7 +122,11 @@ const Projects = () => {
           <div className="flex flex-col justify-center items-center gap-4 pt-6">
             {showTrackBar && (
               <AnimatePresence>
-                <TrackBar projectName={visibleProject} link={link} />
+                <TrackBar
+                  projectName={visibleProject}
+                  link={link}
+                  logo={logo}
+                />
               </AnimatePresence>
             )}
             <div className="flex flex-col gap-52">
