@@ -9,36 +9,45 @@ const cardData = [
     description: 'This is a project',
     url: 'https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?auto=compress&cs=tinysrgb&w=600',
     tags: ['React', 'Tailwind', 'Firebase'],
+    link: 'https://www.google.com',
   },
   {
-    title: 'Project 2',
+    title: 'very very Big text 2',
     description: 'This is a project',
     url: 'https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?auto=compress&cs=tinysrgb&w=600',
     tags: ['React', 'Tailwind', 'Firebase'],
+    link: 'https://www.netflix.com',
   },
   {
     title: 'Project 3',
     description: 'This is a project',
     url: 'https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?auto=compress&cs=tinysrgb&w=600',
     tags: ['React', 'Tailwind', 'Firebase'],
+    link: 'https://www.amazon.com',
   },
 ]
 
 const Projects = () => {
   const [visibleProject, setVisibleProject] = useState(cardData[0].title)
+  const [link, setLink] = useState(cardData[0].link)
+  const [showTrackBar, setShowTrackBar] = useState(true)
   const projectRefs = useRef([])
 
   useEffect(() => {
     const observerOptions = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.7,
+      threshold: 0.5, // 50% visibility
     }
 
     const observerCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setVisibleProject(entry.target.getAttribute('data-title'))
+          const projectTitle = entry.target.getAttribute('data-title')
+          setVisibleProject(projectTitle)
+          // Update the link based on the visible project
+          const project = cardData.find((p) => p.title === projectTitle)
+          if (project) setLink(project.link)
         }
       })
     }
@@ -77,6 +86,16 @@ const Projects = () => {
           })
         }
       })
+
+      // Check if the scroll position is near the bottom of the page
+      const scrollBottom = window.innerHeight + window.scrollY
+      const docHeight = document.documentElement.scrollHeight
+      const nearBottom = docHeight - scrollBottom < 200 // Adjust the threshold as needed
+      if (nearBottom) {
+        setShowTrackBar(false)
+      } else {
+        setShowTrackBar(true)
+      }
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -88,7 +107,7 @@ const Projects = () => {
       <div className="h-full w-full flex justify-center items-start xm:px-2 pb-16">
         <div className="flex flex-col gap-2 items-center">
           <div className="flex flex-col justify-center items-center gap-4 pt-6">
-            <TrackBar projectName={visibleProject} />
+            {showTrackBar && <TrackBar projectName={visibleProject} link={link} />}
             <div className="flex flex-col gap-52">
               {cardData.map((data, index) => (
                 <div

@@ -3,7 +3,7 @@ import React from "react";
 const Cauldron = () => {
   return (
     <svg
-    className="w-6"
+    className="w-5"
       width="51"
       height="54"
       viewBox="0 0 51 54"

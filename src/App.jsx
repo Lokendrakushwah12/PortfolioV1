@@ -4,6 +4,7 @@ import Nav from './components/Nav'
 import Projects from './components/Projects'
 import { useEffect } from 'react'
 import Lenis from 'lenis'
+import Footer from './components/Footer'
 
 function App() {
   useEffect(() => {
@@ -27,6 +28,7 @@ function App() {
           <Nav />
           <Hero />
           <Projects />
+          <Footer />
         </div>
       </BrowserRouter>
     </>
