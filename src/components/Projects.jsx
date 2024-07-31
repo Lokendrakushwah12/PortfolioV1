@@ -21,7 +21,7 @@ const cardData = [
     description: "This is a project",
     url: CauldronIMG,
     tags: ["React", "Tailwind", "Firebase"],
-    link: "https:/www.cauldron.live",
+    link: "https://cauldron.live/",
     logo: Cauldron,
   },
   {
@@ -53,7 +53,7 @@ const Projects = () => {
     const observerOptions = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.5, // 50% visibility
+      threshold: 0.8, // 50% visibility
     };
 
     const observerCallback = (entries) => {
