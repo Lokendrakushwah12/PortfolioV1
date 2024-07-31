@@ -1,11 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react';
 
-const Nav = () => {
-  const [activeTab, setActiveTab] = useState('Projects')
-
+const Nav = ({ activeTab, setActiveTab }) => {
   return (
-    <div className="flex justify-between items-center py-16 xm:px-2">
-      <div className="flex justify-center items-center gap-2">
+    <div className="flex items-center justify-between py-16 xm:px-2">
+      <div className="flex items-center justify-center gap-2">
         <img
           className="rounded-xl"
           src="./favicon.png"
@@ -13,21 +11,21 @@ const Nav = () => {
           height="48px"
           alt="Lokendra Kushwah"
         />
-        <div className="flex flex-col justify-center items-start">
-          <div className="md:text-xl text-[#212121] leading-5 md:leading-5 text-base">
+        <div className="flex flex-col items-start justify-center">
+          <div className="text-base leading-5 text-[#212121] md:text-xl md:leading-5">
             Lokendra Kushwah
           </div>
-          <div className="md:text-base leading-5 md:leading-5 text-sm text-[#212121]/50">
+          <div className="text-sm leading-5 text-[#212121]/50 md:text-base md:leading-5">
             Frontend developer
           </div>
         </div>
       </div>
-      <div className="flex relative rounded-full gap-2 p-1 hover:cursor-pointer transition-all">
+      <div className="relative flex gap-2 rounded-full p-1 transition-all hover:cursor-pointer">
         <div
-          className={`absolute w-1 h-1 rounded-full ${
+          className={`absolute h-1 w-1 rounded-full ${
             activeTab === 'Info'
-              ? 'top-[90%] left-[80%]'
-              : 'top-[90%] left-[30%]'
+              ? 'left-[80%] top-[90%]'
+              : 'left-[30%] top-[90%]'
           } bg-[#717171] transition-all duration-300`}
         />
         <div
@@ -39,7 +37,7 @@ const Nav = () => {
           Projects
         </div>
         <div
-          className={`cursor-pointer  hover:text-[#212121] transition-all  duration-300 ${
+          className={`cursor-pointer transition-all duration-300 hover:text-[#212121] ${
             activeTab === 'Info' ? 'text-[#212121]' : 'text-[#212121]/50'
           }`}
           onClick={() => setActiveTab('Info')}
@@ -48,7 +46,7 @@ const Nav = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;

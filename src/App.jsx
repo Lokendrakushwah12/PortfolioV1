@@ -1,38 +1,79 @@
-import Hero from './components/Hero'
-import { BrowserRouter } from 'react-router-dom'
-import Nav from './components/Nav'
-import Projects from './components/Projects'
-import { useEffect } from 'react'
-import Lenis from 'lenis'
-import Footer from './components/Footer'
+import React, { useState, useEffect } from "react";
+import { BrowserRouter } from "react-router-dom";
+import Nav from "./components/Nav";
+import Hero from "./components/Hero";
+import Projects from "./components/Projects";
+import Info from "./components/Info";
+import Footer from "./components/Footer";
+import Lenis from "lenis";
+import Loader from "./components/Loader";
 
 function App() {
+  const [activeTab, setActiveTab] = useState("Projects");
+  const [headline, setHeadline] = useState("Selected Projects");
+  const [showLoader, setShowLoader] = useState(true);
+  const [initialLoad, setInitialLoad] = useState(true);
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    })
+    });
 
     function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
+      lenis.raf(time);
+      requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf)
-  }, [])
+    requestAnimationFrame(raf);
+  }, []);
+
+  useEffect(() => {
+    if (activeTab === "Projects") {
+      setHeadline("Selected Projects");
+    } else if (activeTab === "Info") {
+      setHeadline("About me");
+    }
+  }, [activeTab]);
+
+  useEffect(() => {
+    const getRandomTimeout = () => {
+      const options = [300, 500, 700];
+      return options[Math.floor(Math.random() * options.length)];
+    };
+
+    const handleLoader = () => {
+      setShowLoader(true);
+      const randomDuration = getRandomTimeout();
+      const timer = setTimeout(() => {
+        setShowLoader(false);
+      }, randomDuration);
+
+      return () => clearTimeout(timer);
+    };
+
+    if (initialLoad) {
+      handleLoader();
+      setInitialLoad(false);
+    } else {
+      handleLoader();
+    }
+  }, [activeTab, initialLoad]);
 
   return (
-    <>
-      <BrowserRouter>
-        <div className="mx-auto xm:max-w-lg max-w-xl md:max-w-3xl lg:max-w-4xl text-base xm:px-0 px-6">
-          <Nav />
-          <Hero />
-          <Projects />
-          <Footer />
-        </div>
-      </BrowserRouter>
-    </>
-  )
+    <BrowserRouter>
+      <div className="lg:max-w-4xl mx-auto max-w-xl px-6 text-base xm:max-w-lg xm:px-0 md:max-w-3xl">
+        <Nav activeTab={activeTab} setActiveTab={setActiveTab} />
+        <Hero headline={headline} />
+        {showLoader ? (
+          <Loader />
+        ) : (
+          <>{activeTab === "Projects" ? <Projects /> : <Info />}</>
+        )}
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
