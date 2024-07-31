@@ -9,11 +9,16 @@ import Cauldron from '../assets/logo/Cauldron'
 import Pixaui from '../assets/logo/Pixaui'
 import Anubhav from '../assets/logo/Anubhav'
 
+// import image components
+import CauldronIMG from '../assets/images/Cauldron.png'
+import PixauiIMG from '../assets/images/Pixaui.png'
+import AnubhavIMG from '../assets/images/Anubhav.png'
+
 const cardData = [
   {
     title: 'Cauldron',
     description: 'This is a project',
-    url: 'https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?auto=compress&cs=tinysrgb&w=600',
+    url: CauldronIMG,
     tags: ['React', 'Tailwind', 'Firebase'],
     link: 'https:/www.cauldron.live',
     logo: Cauldron,
@@ -21,7 +26,7 @@ const cardData = [
   {
     title: 'Pixa ui',
     description: 'This is a project',
-    url: 'https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?auto=compress&cs=tinysrgb&w=600',
+    url: PixauiIMG,
     tags: ['React', 'Tailwind', 'Firebase'],
     link: 'https://pixa-ui.vercel.app/',
     logo: Pixaui,
@@ -29,7 +34,7 @@ const cardData = [
   {
     title: 'Anubhav',
     description: 'This is a project',
-    url: 'https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?auto=compress&cs=tinysrgb&w=600',
+    url: AnubhavIMG,
     tags: ['React', 'Tailwind', 'Firebase'],
     link: 'https://anubhav-frontend-23.vercel.app/',
     logo: Anubhav,

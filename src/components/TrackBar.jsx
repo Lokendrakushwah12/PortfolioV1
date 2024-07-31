@@ -31,8 +31,8 @@ const TrackBar = ({ projectName, link, logo: Logo }) => {
         className="flex transition-all duration-300 justify-center gap-4 p-2 items-center bg-[#121212] rounded-full border border-[#ffffff1d]"
       >
         <div className="bg-white/10 w-3/4 z-20 h-1/4 rounded-full top-0 absolute blur-[12px]"></div>
-        <div className="bg-[#ffffff]/10 z-30 w-8 h-8 p-1 justify-center items-center flex rounded-full">
-         {Logo}
+        <div className="bg-[#ffffff]/10 z-30 w-8 h-8 p-1 border border-[#212121] justify-center items-center flex rounded-full">
+          {Logo}
         </div>
         <h1
           className={`text-base font-[400] min-w-max text-[#eaeaea] transition-all duration-500 ${blur ? 'blur-[8px] opacity-0' : 'blur-0 opacity-100'}`}
