@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import Card from './Card'
 import TrackBar from './TrackBar'
+import { AnimatePresence } from 'framer-motion'
 
 const cardData = [
   {
@@ -107,7 +108,11 @@ const Projects = () => {
       <div className="h-full w-full flex justify-center items-start xm:px-2 pb-16">
         <div className="flex flex-col gap-2 items-center">
           <div className="flex flex-col justify-center items-center gap-4 pt-6">
-            {showTrackBar && <TrackBar projectName={visibleProject} link={link} />}
+            {showTrackBar && (
+              <AnimatePresence>
+                <TrackBar projectName={visibleProject} link={link} />
+              </AnimatePresence>
+            )}
             <div className="flex flex-col gap-52">
               {cardData.map((data, index) => (
                 <div
