@@ -13,6 +13,7 @@ import Anubhav from "../assets/logo/Anubhav";
 import CauldronIMG from "../assets/images/Cauldron.png";
 import PixauiIMG from "../assets/images/Pixaui.png";
 import AnubhavIMG from "../assets/images/Anubhav.png";
+import BlurFade from "./BlurFade";
 
 const cardData = [
   {
@@ -145,11 +146,13 @@ const Projects = () => {
                   ref={(el) => (projectRefs.current[index] = el)}
                   className="transition-transform duration-500"
                 >
-                  <Card
-                    title={data.title}
-                    description={data.description}
-                    url={data.url}
-                  />
+                  <BlurFade delay={index/4}>
+                    <Card
+                      title={data.title}
+                      description={data.description}
+                      url={data.url}
+                    />
+                  </BlurFade>
                 </div>
               ))}
             </div>

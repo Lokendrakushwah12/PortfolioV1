@@ -11,8 +11,8 @@ import Loader from "./components/Loader";
 function App() {
   const [activeTab, setActiveTab] = useState("Projects");
   const [headline, setHeadline] = useState("Selected Projects");
-  const [showLoader, setShowLoader] = useState(true);
-  const [initialLoad, setInitialLoad] = useState(true);
+  const [showLoader, setShowLoader] = useState(false);
+  const [initialLoad, setInitialLoad] = useState(false);
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -43,7 +43,7 @@ function App() {
     };
 
     const handleLoader = () => {
-      setShowLoader(true);
+      setShowLoader(false);
       const randomDuration = getRandomTimeout();
       const timer = setTimeout(() => {
         setShowLoader(false);

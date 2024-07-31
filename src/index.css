@@ -18,8 +18,17 @@ body {
   background-color: #fbfbfb;
 }
 
+.dark body {
+  background-color: #101010;
+  color: #fbfbfb;
+}
+
+.dark ::selection {
+  background: #10b20129;
+}
+
 ::selection {
-  background: #10b20126;
+  background: #15ff003d;
 }
 
 ::-webkit-scrollbar {
@@ -115,4 +124,36 @@ a:hover {
   100% {
     transform: translateY(0);
   }
+}
+
+/* Animation for rotation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon-container {
+  display: flex;
+  width: 3rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.icon {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.rotate {
+  animation: rotate 0.5s forwards;
+}
+
+.hidden {
+  opacity: 0;
 }
