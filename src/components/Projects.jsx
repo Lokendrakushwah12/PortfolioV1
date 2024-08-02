@@ -21,27 +21,30 @@ const cardData = [
     description:
       "Faceless Video Engine - Automate and dominate YouTube without ever showing your face!",
     url: CauldronIMG,
-    tags: ["React", "Tailwind", "Firebase"],
+    tags: ["React", "Tailwind", "Python"],
     link: "https://cauldron.live/",
     logo: Cauldron,
+    github: "https://github.com/Statwarts/Cauldron",
   },
   {
     title: "Pixa ui",
     description:
       "Pixa UI - Collection of Open Source Components for React + TailwindCSS for your Project.",
     url: PixauiIMG,
-    tags: ["React", "Tailwind", "Firebase"],
+    tags: ["React", "Tailwind", "Framer-motion"],
     link: "https://pixa-ui.vercel.app/",
     logo: Pixaui,
+    github: "https://github.com/Lokendrakushwah12/pixa-ui",
   },
   {
     title: "Anubhav",
     description:
       "It is a web-based platform that offers articles and resources focused on college placements and interview experiences.",
     url: AnubhavIMG,
-    tags: ["React", "Tailwind", "Firebase"],
+    tags: ["React", "Tailwind"],
     link: "https://anubhav-frontend-23.vercel.app/",
     logo: Anubhav,
+    github: "https://github.com/aitoss/Anubhav-frontend-23",
   },
 ];
 
@@ -155,6 +158,7 @@ const Projects = () => {
                       description={data.description}
                       url={data.url}
                       tags={data.tags}
+                      github={data.github}
                     />
                   </BlurFade>
                 </div>
