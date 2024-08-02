@@ -18,15 +18,17 @@ import BlurFade from "./BlurFade";
 const cardData = [
   {
     title: "Cauldron",
-    description: "This is a project",
+    description:
+      "Faceless Video Engine - Automate and dominate YouTube without ever showing your face!",
     url: CauldronIMG,
     tags: ["React", "Tailwind", "Firebase"],
-    link: "",
+    link: "https://cauldron.live/",
     logo: Cauldron,
   },
   {
     title: "Pixa ui",
-    description: "This is a project",
+    description:
+      "Pixa UI - Collection of Open Source Components for React + TailwindCSS for your Project.",
     url: PixauiIMG,
     tags: ["React", "Tailwind", "Firebase"],
     link: "https://pixa-ui.vercel.app/",
@@ -34,7 +36,8 @@ const cardData = [
   },
   {
     title: "Anubhav",
-    description: "This is a project",
+    description:
+      "It is a web-based platform that offers articles and resources focused on college placements and interview experiences.",
     url: AnubhavIMG,
     tags: ["React", "Tailwind", "Firebase"],
     link: "https://anubhav-frontend-23.vercel.app/",
@@ -53,7 +56,7 @@ const Projects = () => {
     const observerOptions = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.8, // 50% visibility
+      threshold: 0.6, // 50% visibility
     };
 
     const observerCallback = (entries) => {
@@ -146,11 +149,12 @@ const Projects = () => {
                   ref={(el) => (projectRefs.current[index] = el)}
                   className="transition-transform duration-500"
                 >
-                  <BlurFade delay={index/4}>
+                  <BlurFade delay={index / 4}>
                     <Card
                       title={data.title}
                       description={data.description}
                       url={data.url}
+                      tags={data.tags}
                     />
                   </BlurFade>
                 </div>
