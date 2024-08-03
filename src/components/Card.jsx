@@ -25,7 +25,7 @@ const Card = ({ title, description, tags, url, github }) => {
           <div className="flex w-full items-center justify-between">
             <div className="flex items-center justify-between gap-2 text-2xl font-[500]">
               {title}{" "}
-              <Link to={github}>
+              <Link to={github} target="_blank">
                 <svg
                   className="hover:opacity-90"
                   width="24"
