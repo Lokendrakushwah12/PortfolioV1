@@ -19,12 +19,12 @@ body {
 }
 
 .dark body {
-  background-color: #101010;
+  background-color: #0f0f0f;
   color: #fbfbfb;
 }
 
 .dark ::selection {
-  background: #10b20129;
+  background: #15ff001d;
 }
 
 ::selection {

@@ -17,10 +17,10 @@ const Nav = ({ activeTab, setActiveTab }) => {
           />
         </BlurFade>
         <div className="flex flex-col items-start justify-center">
-          <div className="text-base leading-5 text-[#212121] md:text-xl md:leading-5 dark:text-[#fbfbfb]">
+          <div className="text-base font-[500] leading-5 tracking-wide text-[#212121] dark:text-[#fbfbfb] md:text-xl md:leading-5">
             <BlurFadeText text="Lokendra Kushwah" />
           </div>
-          <div className="text-sm leading-5 text-[#212121]/70 md:text-base md:leading-5 dark:text-[#fbfbfb]/50">
+          <div className="text-sm leading-5 tracking-wide text-[#212121]/70 dark:text-[#fbfbfb]/50 md:text-base md:leading-5">
             <BlurFadeText text="Frontend developer" />
           </div>
         </div>

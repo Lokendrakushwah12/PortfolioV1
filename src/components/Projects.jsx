@@ -98,7 +98,7 @@ const Projects = () => {
           const cardBottom = rect.bottom;
 
           // Calculate the rotation value based on the card's position
-          const rotationStart = 5;
+          const rotationStart = 0;
           let rotateValue = rotationStart;
 
           if (cardTop < windowHeight && cardBottom > 0) {
