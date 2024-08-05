@@ -7,6 +7,7 @@ import Info from "./components/Info";
 import Footer from "./components/Footer";
 import Lenis from "lenis";
 import Loader from "./components/Loader";
+import BlurComponent from "./components/BlurComponent";
 
 function App() {
   const [activeTab, setActiveTab] = useState("Projects");
@@ -62,7 +63,8 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="lg:max-w-4xl mx-auto max-w-xl px-6 text-base xm:max-w-lg xm:px-0 md:max-w-3xl">
+      <div className="lg:max-w-4xl relative mx-auto max-w-xl px-6 text-base xm:max-w-lg xm:px-0 md:max-w-3xl">
+        <BlurComponent />
         <Nav activeTab={activeTab} setActiveTab={setActiveTab} />
         <Hero headline={headline} />
         {showLoader ? (
