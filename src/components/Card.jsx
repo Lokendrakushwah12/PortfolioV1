@@ -7,7 +7,7 @@ const Card = ({ title, description, tags, url, github }) => {
 
   return (
     <>
-      <div className="relative rounded-lg overflow-x-hidden flex aspect-auto w-[28rem] flex-col items-start justify-start border border-[#e9e9e9] bg-[#91919110] shadow-lg dark:border-[#212121] xm:w-full md:w-[36rem]">
+      <div className="relative flex aspect-auto w-[28rem] flex-col items-start justify-start overflow-x-hidden rounded-lg border border-[#e9e9e9] bg-[#91919110] shadow-lg dark:border-[#212121] xm:w-full md:w-[36rem]">
         <img
           className="h-[24rem] w-full select-none object-cover xm:h-[15rem]"
           style={{ backgroundPosition: "top" }}
@@ -53,8 +53,8 @@ const Card = ({ title, description, tags, url, github }) => {
             {description}
           </div>
         </div>
-        <div className="absolute -bottom-12 w-full border-b-2 border-dashed border-gray-500/50"></div>
       </div>
+      <div className="absolute -bottom-28 w-full border-b-2 border-dashed border-gray-500/50"></div>
     </>
   );
 };
