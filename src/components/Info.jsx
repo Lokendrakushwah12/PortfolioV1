@@ -54,7 +54,7 @@ const Info = () => {
             </div>
           </Link>
         </BlurFade>
-        <BlurFade delay={0.3}>
+        <BlurFade delay={0.25}>
           <Link to="https://medium.com/@lokendrakushwah" target="_blank">
             <div className="flex h-5 items-center justify-center gap-1 border-b border-[#fbfbfb] hover:cursor-pointer hover:border-[#212121]/30 dark:border-[#101010] dark:hover:border-[#fbfbfb]/60">
               <h4 className="text-base font-[400] text-[#212121]/70 dark:text-[#fbfbfb]/60">
@@ -77,17 +77,24 @@ const Info = () => {
           </Link>
         </BlurFade>
       </div>
-      <h3 className="text-[20px] font-[400]">Experience</h3>
-      <div className="px-2 w-full">
-        {workHistory.map((job) => (
-          <Experience
-            href={job.href}
-            title={job.title}
-            subtitle={job.subtitle}
-            date={job.date}
-            key={job.href}
-          />
-        ))}
+      <div className="flex w-full flex-col gap-2 py-12">
+        <BlurFade delay={0.3}>
+          <h3 className="text-[20px] font-[400]">Experience</h3>
+        </BlurFade>
+
+        <div className="flex w-full flex-col gap-2 px-2">
+          <BlurFade delay={0.35}>
+            {workHistory.map((job) => (
+              <Experience
+                href={job.href}
+                title={job.title}
+                subtitle={job.subtitle}
+                date={job.date}
+                key={job.href}
+              />
+            ))}
+          </BlurFade>
+        </div>
       </div>
     </div>
   );
