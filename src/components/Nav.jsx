@@ -9,18 +9,19 @@ const Nav = ({ activeTab, setActiveTab }) => {
       <div className="flex items-center justify-center gap-2">
         <BlurFade>
           <img
-            className="rounded-xl"
+            className="rounded-xl select-none"
             src="./favicon.png"
             width="48px"
             height="48px"
             alt="Lokendra Kushwah"
+            draggable="false"
           />
         </BlurFade>
         <div className="flex flex-col items-start justify-center">
           <div className="text-base font-[500] leading-5 tracking-wide text-[#212121] dark:text-[#fbfbfb] md:text-xl md:leading-5">
             <BlurFadeText text="Lokendra Kushwah" />
           </div>
-          <div className="text-sm leading-5 tracking-wide text-[#212121]/70 dark:text-[#fbfbfb]/50 md:text-base md:leading-5">
+          <div className="text-sm leading-5 tracking-wide font-[300] text-[#212121]/70 dark:text-[#fbfbfb]/60 md:text-base md:leading-5">
             <BlurFadeText text="Frontend developer" />
           </div>
         </div>
@@ -33,13 +34,13 @@ const Nav = ({ activeTab, setActiveTab }) => {
                 activeTab === "Info"
                   ? "left-[80%] top-[90%]"
                   : "left-[30%] top-[90%]"
-              } bg-[#717171] transition-all duration-300`}
+              } bg-[#1ab6ff] transition-all duration-300`}
             />
             <div
               className={`cursor-pointer transition-all duration-300 ${
                 activeTab === "Projects"
                   ? "text-[#212121] dark:text-[#fbfbfb]"
-                  : "text-[#212121]/70 dark:text-[#fbfbfb]/50"
+                  : "text-[#212121]/70 dark:text-[#fbfbfb]/60"
               }`}
               onClick={() => setActiveTab("Projects")}
             >
@@ -49,7 +50,7 @@ const Nav = ({ activeTab, setActiveTab }) => {
               className={`hover dark:text-[#fbfbfb]:text-[#212121] cursor-pointer transition-all duration-300 ${
                 activeTab === "Info"
                   ? "text-[#212121] dark:text-[#fbfbfb]"
-                  : "text-[#212121]/70 dark:text-[#fbfbfb]/50"
+                  : "text-[#212121]/70 dark:text-[#fbfbfb]/60"
               }`}
               onClick={() => setActiveTab("Info")}
             >
@@ -57,9 +58,9 @@ const Nav = ({ activeTab, setActiveTab }) => {
             </div>
           </div>
         </BlurFade>
-        <BlurFade>
+        {/* <BlurFade>
           <DarkLight />
-        </BlurFade>
+        </BlurFade> */}
       </div>
     </div>
   );

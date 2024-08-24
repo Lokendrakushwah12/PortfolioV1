@@ -3,7 +3,8 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  font-family: 'Neue Montreal', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter Display', sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
   color: #242729;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -11,8 +12,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
 body {
-  font-family: 'Neue Montreal', sans-serif;
+  font-family: 'Inter Display', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #fbfbfb;
@@ -24,7 +31,7 @@ body {
 }
 
 .dark ::selection {
-  background: #15ff001d;
+  background: #003f5c;
 }
 
 ::selection {

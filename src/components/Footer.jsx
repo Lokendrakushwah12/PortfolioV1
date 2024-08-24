@@ -8,7 +8,7 @@ const Footer = () => {
     <div className="flex flex-col">
       <div className="flex items-center justify-between py-4 pt-24 xm:px-2">
         <div className="flex flex-col gap-4">
-          <h1 className="text-3xl font-[500] leading-5 text-[#212121]/70 dark:text-[#fbfbfb]/50 md:text-6xl md:leading-5">
+          <h1 className="text-3xl font-[500] leading-5 text-[#212121]/70 dark:text-[#fbfbfb]/60 md:text-6xl md:leading-[2.25rem]">
             <BlurFadeText delay={0.2} text="Lokendra Kushwah" />
           </h1>
           <Link to="mailto:Lokendrakushwah8051@gmail.com" target="_blank">
@@ -20,8 +20,8 @@ const Footer = () => {
         <div className="flex flex-col gap-2 p-1 transition-all">
           <BlurFade delay={0.3}>
             <Link to="https://github.com/lokendrakushwah12" target="_blank">
-              <div className="flex h-5 items-center justify-center gap-1 border-b border-[#fbfbfb] hover:cursor-pointer hover:border-[#212121]/30 dark:border-[#101010] dark:hover:border-[#fbfbfb]/50">
-                <h4 className="text-base font-[400] text-[#212121]/70 dark:text-[#fbfbfb]/50">
+              <div className="flex h-5 items-center justify-center gap-1 border-b border-[#fbfbfb] hover:cursor-pointer hover:border-[#212121]/30 dark:border-[#101010] dark:hover:border-[#fbfbfb]/60">
+                <h4 className="text-base font-[400] text-[#212121]/70 dark:text-[#fbfbfb]/60">
                   GitHub
                 </h4>
                 <svg
@@ -43,8 +43,8 @@ const Footer = () => {
 
           <BlurFade delay={0.35}>
             <Link to="https://twitter.com/lokendratwt" target="_blank">
-              <div className="flex h-5 items-center justify-center gap-1 border-b border-[#fbfbfb] hover:cursor-pointer hover:border-[#212121]/30 dark:border-[#101010] dark:hover:border-[#fbfbfb]/50">
-                <h4 className="text-base font-[400] text-[#212121]/70 dark:text-[#fbfbfb]/50">
+              <div className="flex h-5 items-center justify-center gap-1 border-b border-[#fbfbfb] hover:cursor-pointer hover:border-[#212121]/30 dark:border-[#101010] dark:hover:border-[#fbfbfb]/60">
+                <h4 className="text-base font-[400] text-[#212121]/70 dark:text-[#fbfbfb]/60">
                   Twitter
                 </h4>
                 <svg
@@ -75,7 +75,7 @@ const Footer = () => {
         <p className="text-sm font-[400] leading-5 tracking-[0.2px] text-[#212121]/70 dark:text-[#fbfbfb]/40">
           <BlurFadeText
             delay={0.35}
-            text="Last updated by Lokendra on Aug 03, 2024, 05:17 PM IST"
+            text="Last updated by Lokendra on Aug 24, 2024, 11:19 PM IST"
           />
         </p>
       </div>

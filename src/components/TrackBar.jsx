@@ -54,7 +54,7 @@ const TrackBar = ({ projectName, link, logo: Logo }) => {
                 strokeWidth="1.4"
               />
             </svg>
-            <div className="absolute top-0 z-50 h-1/4 w-3/4 rounded-full bg-white/50 blur-[24px] transition-all duration-300 group-hover:bg-white/60"></div>
+            <div className="absolute top-0 z-50 h-1/4 w-3/4 rounded-full bg-white/60 blur-[24px] transition-all duration-300 group-hover:bg-white/60"></div>
           </div>
           <motion.div
             className="absolute bottom-0 left-0 flex size-full h-full w-full items-center justify-center"

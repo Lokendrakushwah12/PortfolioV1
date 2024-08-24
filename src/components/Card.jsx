@@ -17,9 +17,9 @@ const Card = ({ title, description, tags, url, github }) => {
         />
         {/* border */}
         <div className="absolute z-10 h-0 w-full bg-gradient-to-r from-[#242424] via-[#f2f2f2] to-[#242424] dark:h-[1px]" />
-        <div className="absolute z-10 block h-[1px] w-full bg-gradient-to-r from-[#f2f2f2] via-gray-500/50 to-[#f2f2f2] dark:h-0" />
+        <div className="absolute z-10 block h-[1px] w-full bg-gradient-to-r from-[#f2f2f2] via-gray-500/60 to-[#f2f2f2] dark:h-0" />
         <div className="absolute bottom-[0px] z-10 h-0 w-full bg-gradient-to-r from-[#242424] via-[#f2f2f2] to-[#242424] dark:h-[1px]" />
-        <div className="absolute bottom-[0px] z-10 block h-[1px] w-full bg-gradient-to-r from-[#f2f2f2] via-gray-500/50 to-[#f2f2f2] dark:h-0" />
+        <div className="absolute bottom-[0px] z-10 block h-[1px] w-full bg-gradient-to-r from-[#f2f2f2] via-gray-500/60 to-[#f2f2f2] dark:h-0" />
         {/* content */}
         <div className="flex h-1/5 w-full flex-col justify-center gap-1 p-2 text-[#212121] dark:text-[#f2f2f2] md:gap-4">
           <div className="flex w-full items-center justify-between">
@@ -49,12 +49,12 @@ const Card = ({ title, description, tags, url, github }) => {
               ))}
             </div>
           </div>
-          <div className="text-base tracking-wide text-[#212121]/70 dark:text-[#f2f2f2]/50">
+          <div className="text-base tracking-wide text-[#212121]/70 dark:text-[#f2f2f2]/60">
             {description}
           </div>
         </div>
       </div>
-      <div className="absolute -bottom-28 w-full border-b-2 border-dashed border-gray-500/50"></div>
+      <div className="absolute -bottom-28 w-full border-b-2 border-dashed border-gray-500/60"></div>
     </>
   );
 };

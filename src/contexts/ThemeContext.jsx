@@ -11,15 +11,16 @@ export const ThemeProvider = ({ children }) => {
   };
 
   const [darkMode, setDarkMode] = useState(() => {
-    const savedTheme = localStorage.getItem("darkMode");
-    if (savedTheme !== null) {
-      return savedTheme === "true";
-    }
-    return getSystemPreference();
+    // const savedTheme = localStorage.getItem("darkMode");
+    // if (savedTheme !== null) {
+      // return savedTheme === "true";
+    // }
+    // return getSystemPreference();
+    return true;
   });
 
   useEffect(() => {
-    localStorage.setItem("darkMode", darkMode);
+    // localStorage.setItem("darkMode", darkMode);
     document.documentElement.classList.toggle("dark", darkMode);
   }, [darkMode]);
   return (
