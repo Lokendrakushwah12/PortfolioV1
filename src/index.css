@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  font-family: 'Inter Display', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
   color: #242729;
   font-synthesis: none;
@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: 'Inter Display', sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #fbfbfb;
