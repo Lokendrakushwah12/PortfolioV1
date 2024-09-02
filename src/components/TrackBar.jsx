@@ -26,7 +26,7 @@ const TrackBar = ({ projectName, link, logo: Logo }) => {
       className="group fixed bottom-8 z-50 flex cursor-pointer items-center justify-center transition-all duration-300"
     >
       <Link to={link} target="_blank">
-        <BlurFade className="h-full w-full rounded-full backdrop-blur-[12px]">
+        <BlurFade className="h-full w-full shadow-md rounded-full backdrop-blur-[12px]">
           <div className="relative flex items-center justify-center gap-4 overflow-auto rounded-full p-2 transition-all duration-300">
             <div
               className={`z-30 flex h-8 w-8 items-center justify-center rounded-full border border-[#212121] bg-[#ffffff]/10 p-[6px] transition-all duration-500 group-hover:brightness-150 ${blur ? "opacity-0 blur-[8px]" : "opacity-100 blur-0"}`}

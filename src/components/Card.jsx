@@ -7,7 +7,7 @@ const Card = ({ title, description, tags, url, github }) => {
 
   return (
     <>
-      <div className="relative flex aspect-auto w-[28rem] flex-col items-start justify-start overflow-x-hidden rounded-lg border border-[#e9e9e9] bg-[#91919110] shadow-lg dark:border-[#212121] xm:w-full md:w-[36rem]">
+      <div className="relative flex aspect-auto w-[28rem] flex-col items-start justify-start overflow-x-hidden rounded-xl border border-[#e9e9e9] bg-[#91919110] shadow-lg dark:border-[#212121] xm:w-full md:w-[36rem]">
         <img
           className="h-[24rem] w-full select-none object-cover xm:h-[15rem]"
           style={{ backgroundPosition: "top" }}
@@ -15,13 +15,8 @@ const Card = ({ title, description, tags, url, github }) => {
           alt={title}
           draggable="false"
         />
-        {/* border */}
-        <div className="absolute z-10 h-0 w-full bg-gradient-to-r from-[#242424] via-[#f2f2f2] to-[#242424] dark:h-[1px]" />
-        <div className="absolute z-10 block h-[1px] w-full bg-gradient-to-r from-[#f2f2f2] via-gray-500/60 to-[#f2f2f2] dark:h-0" />
-        <div className="absolute bottom-[0px] z-10 h-0 w-full bg-gradient-to-r from-[#242424] via-[#f2f2f2] to-[#242424] dark:h-[1px]" />
-        <div className="absolute bottom-[0px] z-10 block h-[1px] w-full bg-gradient-to-r from-[#f2f2f2] via-gray-500/60 to-[#f2f2f2] dark:h-0" />
         {/* content */}
-        <div className="flex h-1/5 w-full flex-col justify-center gap-1 p-2 text-[#212121] dark:text-[#f2f2f2] md:gap-4">
+        <div className="flex h-1/5 w-full flex-col justify-center gap-1 p-2 text-[#212121] dark:text-[#f2f2f2] md:gap-2">
           <div className="flex w-full items-center justify-between">
             <div className="flex items-center justify-between gap-2 text-2xl font-[500]">
               {title}{" "}
@@ -49,7 +44,7 @@ const Card = ({ title, description, tags, url, github }) => {
               ))}
             </div>
           </div>
-          <div className="text-base tracking-wide text-[#212121]/70 dark:text-[#f2f2f2]/60">
+          <div className="text-base tracking-tight font-[300] text-[#212121]/70 dark:text-[#f2f2f2]/60">
             {description}
           </div>
         </div>

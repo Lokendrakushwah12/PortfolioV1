@@ -12,7 +12,7 @@ const Footer = () => {
             <BlurFadeText delay={0.2} text="Lokendra Kushwah" />
           </h1>
           <Link to="mailto:Lokendrakushwah8051@gmail.com" target="_blank">
-            <h1 className="text-sm font-[400] leading-5 tracking-[0.75px] text-[#212121]/70 dark:text-[#fbfbfb]/40">
+            <h1 className="text-sm font-[400] leading-5 tracking-normal text-[#212121]/70 dark:text-[#fbfbfb]/40">
               <BlurFadeText delay={0.25} text="Lokendrakushwah8051@gmail.com" />
             </h1>
           </Link>
@@ -66,16 +66,16 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex flex-wrap items-center justify-between gap-2 py-16 xm:px-2">
-        <p className="text-sm font-[400] leading-5 tracking-[0.2px] text-[#212121]/70 dark:text-[#fbfbfb]/40">
+        <p className="text-sm tracking-tight font-[300] leading-5 text-[#212121]/70 dark:text-[#fbfbfb]/40">
           <BlurFadeText
             delay={0.3}
             text="© 2024 Lokendra Kushwah. All Rights Reserved."
           />
         </p>
-        <p className="text-sm font-[400] leading-5 tracking-[0.2px] text-[#212121]/70 dark:text-[#fbfbfb]/40">
+        <p className="text-sm tracking-tight font-[300] leading-5 text-[#212121]/70 dark:text-[#fbfbfb]/40">
           <BlurFadeText
             delay={0.35}
-            text="Last updated by Lokendra on Aug 24, 2024, 11:59 PM IST"
+            text="Last updated by Lokendra on Sep 03, 2024, 01:59 AM IST"
           />
         </p>
       </div>
