@@ -14,7 +14,7 @@ const Footer = () => {
           <BlurFadeText delay={0.2} text="Lokendra Kushwah" />
         </h1>
       </div>
-      <div className="flex justify-between pt-4">
+      <div className="flex justify-between pt-4 xm:flex-col xm:gap-4 xm:px-2">
         <ul className="col-span-2 col-start-1 row-start-3 flex w-full items-center gap-x-3.5 sm:col-span-1 sm:col-start-3 sm:row-start-2 sm:w-auto sm:flex-wrap sm:justify-self-end">
           <li className="shrink-0 first:sm:ml-auto">
             <BlurFade delay={0.25}>

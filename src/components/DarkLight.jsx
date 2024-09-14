@@ -17,7 +17,7 @@ const DarkLight = () => {
   return (
     <div
       onClick={handleThemeToggle}
-      className="flex h-8 w-8 cursor-pointer items-center justify-center"
+      className="flex h-8 w-8 xm:scale-75 cursor-pointer items-center justify-center"
     >
       <svg
         className={`icon ${rotating ? "rotate" : ""} ${darkMode ? "hidden" : ""}`}

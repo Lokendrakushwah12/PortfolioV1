@@ -20,7 +20,7 @@ const Experience = ({ href, title, subtitle, date }) => {
           )}
         </Link>
         {date && (
-          <span className="flex-none font-mono font-[400]  text-[#212121]/60 dark:text-[#f2f2f2]/60">
+          <span className="flex-none xm:text-sm font-[400]  text-[#212121]/60 dark:text-[#f2f2f2]/60">
             {date}
           </span>
         )}

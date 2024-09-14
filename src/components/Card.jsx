@@ -7,11 +7,11 @@ const Card = ({ title, description, tags, github, Logo }) => {
 
   return (
     <>
-      <div className="relative flex aspect-auto group w-full flex-col items-start justify-start overflow-x-hidden rounded-xl border border-[#e9e9e9] bg-[#91919110] dark:border-[#212121]">
+      <div className="relative flex aspect-auto group w-full flex-col items-start justify-start overflow-x-hidden rounded-xl border border-[#e9e9e9] bg-[#212121]/4 dark:bg-[#212121]/10 dark:border-[#212121]">
         {/* content */}
         <div className="flex h-1/5 w-full flex-col justify-center gap-1 p-2 text-[#212121] dark:text-[#f2f2f2] md:gap-2">
-          <div className="flex justify-center group-hover:brightness-110 items-center w-12 h-12 bg-[#212121]/30 transition-all duration-300 dark:bg-[#212121] border border-[#f2f2f2]/10 rounded-lg">
-            <div className="scale-150">
+          <div className="flex justify-center group-hover:brightness-110 items-center w-8 h-8 bg-[#212121]/80 transition-all duration-300 dark:bg-[#212121] border border-[#f2f2f2]/10 rounded-md">
+            <div className="scale-[50%]">
               <Logo />
             </div>
           </div>
