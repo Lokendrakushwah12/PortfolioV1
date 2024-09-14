@@ -9,10 +9,6 @@ import Cauldron from "../assets/logo/Cauldron";
 import Pixaui from "../assets/logo/Pixaui";
 import Anubhav from "../assets/logo/Anubhav";
 
-// import image components
-import CauldronIMG from "../assets/images/Cauldron.png";
-import PixauiIMG from "../assets/images/Pixaui.png";
-import AnubhavIMG from "../assets/images/Anubhav.png";
 import BlurFade from "./BlurFade";
 
 const cardData = [
@@ -20,30 +16,27 @@ const cardData = [
     title: "Cauldron",
     description:
       "Faceless Video Engine - Automate and dominate YouTube without ever showing your face!",
-    url: CauldronIMG,
     tags: ["React", "Tailwind", "Python"],
     link: "https://cauldron.live/",
-    logo: Cauldron,
+    Logo: Cauldron,
     github: "https://github.com/Statwarts/Cauldron",
   },
   {
     title: "Pixa ui",
     description:
       "Pixa UI - Collection of Open Source Components for React + TailwindCSS for your Project.",
-    url: PixauiIMG,
     tags: ["React", "Tailwind", "Framer-motion"],
     link: "https://pixa-ui.vercel.app/",
-    logo: Pixaui,
+    Logo: Pixaui,
     github: "https://github.com/Lokendrakushwah12/pixa-ui",
   },
   {
     title: "Anubhav",
     description:
       "It is a web-based platform that offers articles and resources focused on college placements and interview experiences.",
-    url: AnubhavIMG,
     tags: ["React", "Tailwind"],
     link: "https://anubhav-frontend-23.vercel.app/",
-    logo: Anubhav,
+    Logo: Anubhav,
     github: "https://github.com/aitoss/Anubhav-frontend-23",
   },
 ];
@@ -51,7 +44,7 @@ const cardData = [
 const Projects = () => {
   const [visibleProject, setVisibleProject] = useState(cardData[0].title);
   const [link, setLink] = useState(cardData[0].link);
-  const [logo, setLogo] = useState(cardData[0].logo);
+  const [logo, setLogo] = useState(cardData[0].Logo);
   const [showTrackBar, setShowTrackBar] = useState(true);
   const projectRefs = useRef([]);
 
@@ -59,7 +52,7 @@ const Projects = () => {
     const observerOptions = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.6, // 50% visibility
+      threshold: 0.9, // 50% visibility
     };
 
     const observerCallback = (entries) => {
@@ -71,7 +64,7 @@ const Projects = () => {
           const project = cardData.find((p) => p.title === projectTitle);
           if (project) {
             setLink(project.link);
-            setLogo(project.logo);
+            setLogo(project.Logo);
           }
         }
       });
@@ -133,8 +126,8 @@ const Projects = () => {
   return (
     <>
       <div className="flex h-full w-full items-start justify-center pb-16 xm:px-2">
-        <div className="flex flex-col items-center gap-2">
-          <div className="flex flex-col items-center justify-center gap-4 pt-6">
+        <div className="flex flex-col items-center w-full gap-2">
+          <div className="flex flex-col w-full items-center justify-center gap-4 pt-6">
             <AnimatePresence>
               {showTrackBar && (
                 <TrackBar
@@ -144,21 +137,21 @@ const Projects = () => {
                 />
               )}
             </AnimatePresence>
-            <div className="flex flex-col gap-52">
+            <div className="flex flex-col w-full gap-32">
               {cardData.map((data, index) => (
                 <div
                   key={index}
                   data-title={data.title}
                   ref={(el) => (projectRefs.current[index] = el)}
-                  className="transition-transform duration-500"
+                  className="transition-transform w-full duration-500"
                 >
-                  <BlurFade delay={index / 4}>
+                  <BlurFade delay={index / 4} className="w-full">
                     <Card
                       title={data.title}
                       description={data.description}
-                      url={data.url}
                       tags={data.tags}
                       github={data.github}
+                      Logo={data.Logo}
                     />
                   </BlurFade>
                 </div>

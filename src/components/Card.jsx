@@ -2,24 +2,22 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../contexts/ThemeContext";
 
-const Card = ({ title, description, tags, url, github }) => {
+const Card = ({ title, description, tags, github, Logo }) => {
   const { darkMode } = useContext(ThemeContext);
 
   return (
     <>
-      <div className="relative flex aspect-auto w-[28rem] flex-col items-start justify-start overflow-x-hidden rounded-xl border border-[#e9e9e9] bg-[#91919110] shadow-lg dark:border-[#212121] xm:w-full md:w-[36rem]">
-        <img
-          className="h-[24rem] w-full select-none object-cover xm:h-[15rem]"
-          style={{ backgroundPosition: "top" }}
-          src={url}
-          alt={title}
-          draggable="false"
-        />
+      <div className="relative flex aspect-auto group w-full flex-col items-start justify-start overflow-x-hidden rounded-xl border border-[#e9e9e9] bg-[#91919110] dark:border-[#212121]">
         {/* content */}
         <div className="flex h-1/5 w-full flex-col justify-center gap-1 p-2 text-[#212121] dark:text-[#f2f2f2] md:gap-2">
+          <div className="flex justify-center group-hover:brightness-110 items-center w-12 h-12 bg-[#212121]/30 transition-all duration-300 dark:bg-[#212121] border border-[#f2f2f2]/10 rounded-lg">
+            <div className="scale-150">
+              <Logo />
+            </div>
+          </div>
           <div className="flex w-full items-center justify-between">
-            <div className="flex items-center justify-between gap-2 text-2xl font-[500]">
-              {title}{" "}
+            <div className="flex items-center w-full InterVariable justify-between gap-2 text-2xl font-[500]">
+              {title}
               <Link to={github} target="_blank">
                 <svg
                   className="hover:opacity-90"
@@ -33,23 +31,23 @@ const Card = ({ title, description, tags, url, github }) => {
                 </svg>
               </Link>
             </div>
-            <div className="flex gap-2">
-              {tags.map((tag, index) => (
-                <div
-                  key={index}
-                  className="rounded-md border border-[#d9d9d9] bg-[#f2f2f2] px-2 py-1 text-xs tracking-wider dark:border-[#414141] dark:bg-[#242424]"
-                >
-                  {tag}
-                </div>
-              ))}
-            </div>
           </div>
           <div className="text-base tracking-tight font-[300] text-[#212121]/70 dark:text-[#f2f2f2]/60">
             {description}
           </div>
+          <div className="flex gap-2">
+            {tags.map((tag, index) => (
+              <div
+                key={index}
+                className="rounded-sm bg-[#212121]/10 dark:bg-[#242424] text-[#212121]/50 dark:text-[#f2f2f2]/50 px-2 py-1 text-sm tracking-wider"
+              >
+                {tag}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-      <div className="absolute -bottom-28 w-full border-b-2 border-dashed border-gray-500/60"></div>
+      <div className="absolute -bottom-16 w-full border-b-2 border-dashed border-gray-500/60"></div>
     </>
   );
 };

@@ -1,0 +1,6 @@
+/* custom font */
+
+@font-face {
+    font-family: "Supply";
+    src: url("./src/assets/fonts/Supply.woff2") format("woff2");
+}

@@ -27,34 +27,23 @@ const TrackBar = ({ projectName, link, logo: Logo }) => {
     >
       <Link to={link} target="_blank">
         <BlurFade className="h-full w-full shadow-md rounded-full backdrop-blur-[12px]">
-          <div className="relative flex items-center justify-center gap-4 overflow-auto rounded-full p-2 transition-all duration-300">
+          <div className="no-scrollbar relative flex items-center justify-center gap-4 overflow-auto rounded-full p-2 transition-all duration-300">
             <div
               className={`z-30 flex h-8 w-8 items-center justify-center rounded-full border border-[#212121] bg-[#ffffff]/10 p-[6px] transition-all duration-500 group-hover:brightness-150 ${blur ? "opacity-0 blur-[8px]" : "opacity-100 blur-0"}`}
             >
               {Logo}
             </div>
-            <div className="-mx-2 h-full w-[1px] rounded-full bg-[#ffffff]"></div>
             <h1
               className={`relative min-w-max text-base font-[400] text-[#eaeaea] transition-all duration-500 ${blur ? "opacity-0 blur-[8px]" : "opacity-100 blur-0"}`}
             >
               {displayedProjectName}
             </h1>
-            <svg
-              className="mr-2 transition-all duration-300 group-hover:brightness-150"
-              width="13"
-              height="13"
-              viewBox="0 0 13 13"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 1H12M12 1V13M12 1L0.666667 12.3333"
-                stroke="white"
-                strokeOpacity="0.5"
-                strokeWidth="1.4"
-              />
+            <svg width="28" height="28" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.41906 5.86688L10.1881 5.86688L10.1881 10.6359" stroke="#F0F0F0" stroke-width="0.833333" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round" />
+              <path d="M5.67044 10.3845L9.99165 6.06325" stroke="#F0F0F0" stroke-width="0.833333" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round" />
             </svg>
-            <div className="absolute top-0 z-50 h-1/4 w-3/4 rounded-full bg-white/60 blur-[24px] transition-all duration-300 group-hover:bg-white/60"></div>
+
+            <div className="absolute -top-4 z-50 h-1/4 w-3/4 rounded-full bg-white/30 blur-[24px] transition-all duration-300 group-hover:bg-white/40"></div>
           </div>
           <motion.div
             className="absolute bottom-0 left-0 flex size-full h-full w-full items-center justify-center"
