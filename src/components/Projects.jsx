@@ -129,13 +129,13 @@ const Projects = () => {
         <div className="flex flex-col items-center w-full gap-2">
           <div className="flex flex-col w-full items-center justify-center gap-4 pt-6">
             <AnimatePresence>
-              {showTrackBar && (
+              {/* {showTrackBar && (
                 <TrackBar
                   projectName={visibleProject}
                   link={link}
                   logo={logo}
                 />
-              )}
+              )} */}
             </AnimatePresence>
             <div className="flex flex-col w-full gap-32">
               {cardData.map((data, index) => (
@@ -152,6 +152,7 @@ const Projects = () => {
                       tags={data.tags}
                       github={data.github}
                       Logo={data.Logo}
+                      url={data.link}
                     />
                   </BlurFade>
                 </div>

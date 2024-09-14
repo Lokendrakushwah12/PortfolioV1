@@ -8,19 +8,19 @@ const Experience = ({ href, title, subtitle, date }) => {
         <Link
           to={href}
           target="_blank"
-          className="sm:gap-4 flex items-center gap-2"
+          className="sm:gap-4 flex flex-col items-start"
         >
-          <strong className="text-gray-1000 line-clamp-2 font-[400] dark:text-[#f2f2f2]">
-            {title}
-          </strong>
           {subtitle && (
-            <span className="flex-none text-[14px] font-[400] text-[#212121]/60 dark:text-[#f2f2f2]/60">
-              — {subtitle}
+            <span className="flex-none text-base font-[400] text-[#212121] dark:text-[#f2f2f2]">
+              {subtitle}
             </span>
           )}
+          <strong className="text-gray-1000 line-clamp-2 font-[400] text-[#212121]/60 dark:text-[#f2f2f2]/60">
+            {title}
+          </strong>
         </Link>
         {date && (
-          <span className="flex-none xm:text-sm font-[400]  text-[#212121]/60 dark:text-[#f2f2f2]/60">
+          <span className="flex-none text-sm font-[400] text-[#212121]/60 dark:text-[#f2f2f2]/60">
             {date}
           </span>
         )}
