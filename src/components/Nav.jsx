@@ -15,11 +15,11 @@ const Nav = ({ activeTab, setActiveTab }) => {
             draggable="false"
           />
         </BlurFade>
-        <div className="flex flex-col items-start justify-center xm:-mb-1">
-          <div className="text-base font-[500] xm:text-sm InterVariable tracking-wide text-[#212121] dark:text-[#fbfbfb] md:text-xl">
+        <div className="flex flex-col items-start justify-center">
+          <div className="text-2xl -mb-0.5 font-[500] xm:text-xl Instrument-Serif tracking-wide text-[#212121] dark:text-[#fbfbfb] md:text-2xl">
             <BlurFadeText text="Lokendra Kushwah" />
           </div>
-          <div className="text-sm tracking-wide xm:-mt-1 xm:text-[12px] font-[300] text-[#212121]/70 dark:text-[#fbfbfb]/60 md:text-base">
+          <div className="text-sm -mt-1 xm:text-[12px] tracking-tight font-[300] text-[#212121] dark:text-[#fbfbfb]/60 md:text-base">
             <BlurFadeText text="Frontend developer" />
           </div>
         </div>
@@ -36,7 +36,7 @@ const Nav = ({ activeTab, setActiveTab }) => {
             <div
               className={`cursor-pointer transition-all duration-300 ${activeTab === "Projects"
                 ? "text-[#212121] dark:text-[#fbfbfb]"
-                : "text-[#212121]/70 dark:text-[#fbfbfb]/60"
+                : "text-[#212121] dark:text-[#fbfbfb]/60"
                 }`}
               onClick={() => setActiveTab("Projects")}
             >
@@ -45,7 +45,7 @@ const Nav = ({ activeTab, setActiveTab }) => {
             <div
               className={`hover dark:text-[#fbfbfb]:text-[#212121] cursor-pointer transition-all duration-300 ${activeTab === "Info"
                 ? "text-[#212121] dark:text-[#fbfbfb]"
-                : "text-[#212121]/70 dark:text-[#fbfbfb]/60"
+                : "text-[#212121] dark:text-[#fbfbfb]/60"
                 }`}
               onClick={() => setActiveTab("Info")}
             >

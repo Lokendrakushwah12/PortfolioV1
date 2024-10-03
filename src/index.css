@@ -20,8 +20,8 @@ body {
   background-color: #fbfbfb;
 }
 
-.InterVariable {
-  font-family: 'InterVariable', sans-serif;
+.Instrument-Serif {
+  font-family: 'Instrument Serif', sans-serif;
 }
 
 .dark body {
@@ -30,12 +30,13 @@ body {
 }
 
 .dark ::selection {
-  background: hsla(0, 0%, 15%, 1);
-  /* color: #121212; */
+  background: hsla(0, 0%, 85%, 1);
+  color: #121212;
 }
 
 ::selection {
-  background: hsla(0, 0%, 85%, 1);
+  background: hsla(0, 0%, 15%, 1);
+  color: #fbfbfb;
 }
 
 .no-scrollbar::-webkit-scrollbar {

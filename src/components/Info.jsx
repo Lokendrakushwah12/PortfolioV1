@@ -19,7 +19,7 @@ const Info = () => {
   return (
     <div className="flex flex-col items-start justify-start gap-4 dark:text-[#f2f2f2]/80 xm:px-4">
       <BlurFade charachterDelay={0.1}>
-        <h1 className="leading-[150%] text-[#212121]/60 dark:text-[#f2f2f2]/60 text-[1rem] md:text-[1.25rem]">
+        <h1 className="leading-[150%] Instrument-Serif text-[#212121]/60 dark:text-[#f2f2f2]/60 text-[2rem] xm:text-[1.75rem] md:text-[2.25rem]">
           <span className="rounded-sm bg-[#777] font-[400] text-[#212121]/80 dark:text-[#f2f2f2]/80 bg-[rgba(217,217,217,0.5)] dark:bg-[rgba(64,64,64,0.5)]">
             Frontend developer
           </span>

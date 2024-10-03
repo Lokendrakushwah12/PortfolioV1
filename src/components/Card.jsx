@@ -7,17 +7,17 @@ const Card = ({ title, description, tags, github, Logo, url }) => {
 
   return (
     <>
-      <div className="relative flex aspect-auto group w-full flex-col items-start justify-start overflow-x-hidden rounded-xl border border-[#e9e9e9] bg-[#212121]/4 dark:bg-[#212121]/10 dark:border-[#212121]">
+      <div className="relative flex aspect-auto group w-full flex-col items-start justify-start overflow-x-hidden rounded-xl border border-[#e9e9e9] bg-[#21212106] dark:bg-[#21212140] dark:border-[#212121]">
         {/* content */}
         <div className="flex w-full flex-col justify-center gap-1 p-2 text-[#212121] dark:text-[#f2f2f2] md:gap-2">
           <div className="flex w-full justify-between items-center">
             <Link to={url} className="flex justify-center items-center gap-2">
-              <div className="flex justify-center group-hover:brightness-110 items-center w-8 h-8 bg-[#212121] transition-all duration-300 dark:bg-[#212121] border border-[#f2f2f2]/10 rounded-md">
-                <div className="scale-[50%]">
+              <div className="flex justify-center group-hover:brightness-110 items-center w-10 h-10 bg-[#212121] transition-all duration-300 dark:bg-[#212121] border border-[#f2f2f2]/10 rounded-md">
+                <div className="scale-[80%]">
                   <Logo />
                 </div>
               </div>
-              <div className="flex items-center hover:border-gray-500/80 dark:hover:border-gray-500 border-[#fbfbfb] dark:border-[#212121]/10 border-b  border-dashed dark:text-[#f2f2f2] text-[#212121] InterVariable justify-between gap-2 text-2xl font-[500]">
+              <div className="flex items-center hover:border-gray-500/80 dark:hover:border-gray-500 border-[#fbfbfb] dark:border-[#212121]/10 border-b  border-dashed dark:text-[#f2f2f2] text-[#212121] Instrument-Serif justify-between gap-2 text-4xl font-[500]">
                 {title}
               </div>
             </Link>
@@ -34,14 +34,14 @@ const Card = ({ title, description, tags, github, Logo, url }) => {
               </svg>
             </Link>
           </div>
-          <div className="text-base tracking-tight font-[300] text-[#212121]/70 dark:text-[#f2f2f2]/60">
+          <div className="text-base tracking-tight font-[300] text-[#212121] dark:text-[#f2f2f2]/60">
             {description}
           </div>
           <div className="flex gap-2">
             {tags.map((tag, index) => (
               <div
                 key={index}
-                className="rounded-sm bg-[#212121]/10 dark:bg-[#242424] text-[#212121]/50 dark:text-[#f2f2f2]/50 px-1 py-0.5 text-sm tracking-wider"
+                className="rounded-sm select-none bg-[#212121]/10 dark:bg-[#242424] text-[#212121] dark:text-[#f2f2f2]/50 px-1 py-0.5 text-sm tracking-wider"
               >
                 {tag}
               </div>

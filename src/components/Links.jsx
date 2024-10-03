@@ -11,7 +11,7 @@ export const Links = () => {
             target="_blank"
           >
             <div className="flex h-5 items-center justify-center gap-1 border-b border-[#fbfbfb] hover:cursor-pointer hover:border-[#212121]/30 dark:border-[#101010] dark:hover:border-[#fbfbfb]/60">
-              <h4 className="text-base font-[400] text-[#212121]/70 dark:text-[#fbfbfb]/60">
+              <h4 className="text-base font-[400] text-[#212121] dark:text-[#fbfbfb]/60">
                 Resume
               </h4>
               <svg
@@ -33,7 +33,7 @@ export const Links = () => {
         <BlurFade delay={0.25}>
           <Link to="https://medium.com/@lokendrakushwah" target="_blank">
             <div className="flex h-5 items-center justify-center gap-1 border-b border-[#fbfbfb] hover:cursor-pointer hover:border-[#212121]/30 dark:border-[#101010] dark:hover:border-[#fbfbfb]/60">
-              <h4 className="text-base font-[400] text-[#212121]/70 dark:text-[#fbfbfb]/60">
+              <h4 className="text-base font-[400] text-[#212121] dark:text-[#fbfbfb]/60">
                 Medium
               </h4>
               <svg
