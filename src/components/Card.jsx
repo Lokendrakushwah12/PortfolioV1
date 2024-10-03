@@ -7,9 +7,9 @@ const Card = ({ title, description, tags, github, Logo, url }) => {
 
   return (
     <>
-      <div className="relative flex aspect-auto group w-full flex-col items-start justify-start overflow-x-hidden rounded-xl border border-[#e9e9e9] bg-[#21212106] dark:bg-[#21212140] dark:border-[#212121]">
+      <div className="relative flex aspect-auto group w-full flex-col items-start justify-start overflow-x-hidden rounded-2xl border border-[#e9e9e9] bg-[#21212106] dark:bg-[#21212140] dark:border-[#212121]">
         {/* content */}
-        <div className="flex w-full flex-col justify-center gap-1 p-2 text-[#212121] dark:text-[#f2f2f2] md:gap-2">
+        <div className="flex w-full flex-col justify-center gap-1 p-4 text-[#212121] dark:text-[#f2f2f2] md:gap-2">
           <div className="flex w-full justify-between items-center">
             <Link to={url} className="flex justify-center items-center gap-2">
               <div className="flex justify-center group-hover:brightness-110 items-center w-10 h-10 bg-[#212121] transition-all duration-300 dark:bg-[#212121] border border-[#f2f2f2]/10 rounded-md">

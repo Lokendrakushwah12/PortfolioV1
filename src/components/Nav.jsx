@@ -36,7 +36,7 @@ const Nav = ({ activeTab, setActiveTab }) => {
             <div
               className={`cursor-pointer transition-all duration-300 ${activeTab === "Projects"
                 ? "text-[#212121] dark:text-[#fbfbfb]"
-                : "text-[#212121] dark:text-[#fbfbfb]/60"
+                : "text-[#212121]/60 dark:text-[#fbfbfb]/60"
                 }`}
               onClick={() => setActiveTab("Projects")}
             >
@@ -45,7 +45,7 @@ const Nav = ({ activeTab, setActiveTab }) => {
             <div
               className={`hover dark:text-[#fbfbfb]:text-[#212121] cursor-pointer transition-all duration-300 ${activeTab === "Info"
                 ? "text-[#212121] dark:text-[#fbfbfb]"
-                : "text-[#212121] dark:text-[#fbfbfb]/60"
+                : "text-[#212121]/60 dark:text-[#fbfbfb]/60"
                 }`}
               onClick={() => setActiveTab("Info")}
             >

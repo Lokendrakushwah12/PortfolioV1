@@ -33,7 +33,7 @@ const Footer = () => {
           </li>
         </ul>
         <Link to="mailto:Lokendrakushwah8051@gmail.com" target="_blank">
-          <h1 className="text-sm font-[400] leading-5 tracking-normal text-[#212121] dark:text-[#fbfbfb]/40">
+          <h1 className="text-sm font-[400] tracking-normal mix-blend-difference leading-5 text-[#b9b9b9] dark:text-[#8f8f8f]">
             <BlurFadeText delay={0.4} text="Lokendrakushwah8051@gmail.com" />
           </h1>
         </Link>
@@ -45,13 +45,18 @@ const Footer = () => {
             text="© 2024 — Lokendra Kushwah"
           />
         </p>
-        <p className="text-sm tracking-tight font-[300] leading-5 text-[#212121] dark:text-[#fbfbfb]/40">
+        <p className="text-sm tracking-tight font-[300] mix-blend-difference leading-5 text-[#b9b9b9] dark:text-[#8f8f8f]">
           <BlurFadeText
             delay={0.5}
             text="Last updated by Lokendra on Oct 03, 2024, 11:09 PM IST"
           />
         </p>
       </div>
+      <BlurFade delay={0.3}>
+        <div className="absolute select-none h-60 bottom-28 right-4 md:-right-20 -z-10">
+          <img src="./art.png" alt="Lokendra Kushwah" loading="lazy" className=" h-[300px]" />
+        </div>
+      </BlurFade>
     </div>
   );
 };
