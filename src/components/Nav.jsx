@@ -13,6 +13,7 @@ const Nav = ({ activeTab, setActiveTab }) => {
             src="./favicon.png"
             alt="Lokendra Kushwah"
             draggable="false"
+            loading="lazy"
           />
         </BlurFade>
         <div className="flex flex-col items-start justify-center">

@@ -52,7 +52,7 @@ const Footer = () => {
           />
         </p>
       </div>
-      <BlurFade delay={0.3}>
+      <BlurFade delay={0.3} className="-z-30">
         <div className="absolute select-none h-60 bottom-28 right-4 md:-right-20 -z-10">
           <img src="./art.png" alt="Lokendra Kushwah" loading="lazy" className=" h-[300px]" />
         </div>
