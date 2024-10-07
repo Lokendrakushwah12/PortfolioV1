@@ -8,10 +8,29 @@ import { AnimatePresence } from "framer-motion";
 import Cauldron from "../assets/logo/Cauldron";
 import Pixaui from "../assets/logo/Pixaui";
 import Anubhav from "../assets/logo/Anubhav";
+import Linkify from "../assets/logo/Linkify";
 
 import BlurFade from "./BlurFade";
 
 const cardData = [
+  {
+    title: "Anubhav",
+    description:
+      "It is a web-based platform which provides college placements and interview experiences",
+    tags: ["ReactJS", "Tailwind", "MongoDB"],
+    link: "https://anubhav-frontend-23.vercel.app/",
+    Logo: Anubhav,
+    github: "https://github.com/aitoss/Anubhav-frontend-23",
+  },
+  {
+    title: "Linkify",
+    description:
+      "URL shortener utilizing NanoID for generating unique shortened links, Built the backend with Prisma and PostgreSQL in a Next.js serverless environment, implemented view counts",
+    tags: ["NextJS", "Tailwind", "Prisma", "PostgreSQL"],
+    link: "https://linkify-url.vercel.app/",
+    Logo: Linkify,
+    github: "https://github.com/Lokendrakushwah12/Linkify",
+  },
   {
     title: "Cauldron",
     description:
@@ -29,15 +48,6 @@ const cardData = [
     link: "https://pixa-ui.vercel.app/",
     Logo: Pixaui,
     github: "https://github.com/Lokendrakushwah12/pixa-ui",
-  },
-  {
-    title: "Anubhav",
-    description:
-      "It is a web-based platform that offers articles and resources focused on college placements and interview experiences.",
-    tags: ["React", "Tailwind"],
-    link: "https://anubhav-frontend-23.vercel.app/",
-    Logo: Anubhav,
-    github: "https://github.com/aitoss/Anubhav-frontend-23",
   },
 ];
 
@@ -126,8 +136,8 @@ const Projects = () => {
   return (
     <>
       <div className="flex h-full w-full items-start justify-center pb-16 xm:px-2">
-        <div className="flex flex-col items-center w-full gap-2">
-          <div className="flex flex-col w-full items-center justify-center gap-4 pt-6">
+        <div className="flex w-full flex-col items-center gap-2">
+          <div className="flex w-full flex-col items-center justify-center gap-4 pt-6">
             <AnimatePresence>
               {/* {showTrackBar && (
                 <TrackBar
@@ -137,13 +147,13 @@ const Projects = () => {
                 />
               )} */}
             </AnimatePresence>
-            <div className="flex flex-col w-full gap-32">
+            <div className="flex w-full flex-col gap-32">
               {cardData.map((data, index) => (
                 <div
                   key={index}
                   data-title={data.title}
                   ref={(el) => (projectRefs.current[index] = el)}
-                  className="transition-transform w-full duration-500"
+                  className="w-full transition-transform duration-500"
                 >
                   <BlurFade delay={index / 4} className="w-full">
                     <Card

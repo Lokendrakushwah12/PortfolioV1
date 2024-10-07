@@ -48,7 +48,7 @@ const Footer = () => {
         <p className="text-sm tracking-tight font-[300] mix-blend-difference leading-5 text-[#b9b9b9] dark:text-[#8f8f8f]">
           <BlurFadeText
             delay={0.5}
-            text="Last updated by Lokendra on Oct 03, 2024, 11:09 PM IST"
+            text="Last updated by Lokendra on Oct 08, 2024, 03:29 AM IST"
           />
         </p>
       </div>
