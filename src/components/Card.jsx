@@ -5,19 +5,28 @@ import { ThemeContext } from "../contexts/ThemeContext";
 const Card = ({ title, description, tags, github, Logo, url }) => {
   const { darkMode } = useContext(ThemeContext);
 
+  // Define a set of colors for tags
+  const tagColors = [
+    { bg: "bg-[#22ff991e]", text: "text-[#36c781]" },
+    { bg: "bg-[#ff8dcc1e]", text: "text-[#ff8dcc]" },
+    { bg: "bg-[#f5d63d1e]", text: "text-[#ffaf2f]" },
+    { bg: "bg-[#6ea2ff1e]", text: "text-[#3fcfff]" },
+    { bg: "bg-[#ff9e6e1e]", text: "text-[#d6723a]" },
+  ];
+
   return (
     <>
-      <div className="relative flex aspect-auto group w-full flex-col items-start justify-start overflow-x-hidden rounded-2xl border border-[#e9e9e9] bg-[#21212106] dark:bg-[#21212140] dark:border-[#212121]">
+      <div className="group relative flex aspect-auto w-full flex-col items-start justify-start overflow-x-hidden rounded-2xl bg-[#21212106] transition-all hover:bg-[#12121210] dark:border-[#212121] dark:bg-[#21212140] dark:hover:bg-[#3334]">
         {/* content */}
         <div className="flex w-full flex-col justify-center gap-1 p-4 text-[#212121] dark:text-[#f2f2f2] md:gap-2">
-          <div className="flex w-full justify-between items-center">
-            <Link to={url} className="flex justify-center items-center gap-2">
-              <div className="flex justify-center group-hover:brightness-110 items-center w-10 h-10 bg-[#212121] transition-all duration-300 dark:bg-[#212121] border border-[#f2f2f2]/10 rounded-md">
+          <div className="flex w-full items-center justify-between">
+            <Link to={url} className="flex items-center justify-center gap-4">
+              <div className="flex h-10 w-10 items-center justify-center rounded-md border border-[#f2f2f2]/10 bg-[#212121] transition-all duration-300 group-hover:brightness-110 dark:bg-[#212121]">
                 <div className="scale-[80%]">
                   <Logo />
                 </div>
               </div>
-              <div className="flex items-center hover:border-gray-500/80 dark:hover:border-gray-500 border-[#fbfbfb] dark:border-[#212121]/10 border-b  border-dashed dark:text-[#f2f2f2] text-[#212121] Instrument-Serif justify-between gap-2 text-4xl font-[500]">
+              <div className="Instrument-Serif flex items-center justify-between gap-2 border-b border-dashed border-[#fbfbfb] text-4xl font-[500] text-[#212121] hover:border-gray-500/80 dark:border-[#212121]/10 dark:text-[#f2f2f2] dark:hover:border-gray-500">
                 {title}
               </div>
             </Link>
@@ -34,22 +43,24 @@ const Card = ({ title, description, tags, github, Logo, url }) => {
               </svg>
             </Link>
           </div>
-          <div className="text-base tracking-tight font-[300] text-[#212121] dark:text-[#f2f2f2]/60">
+          <div className="text-base font-[300] tracking-tight text-[#212121] dark:text-[#f2f2f2]/60">
             {description}
           </div>
           <div className="flex gap-2">
-            {tags.map((tag, index) => (
-              <div
-                key={index}
-                className="rounded-sm select-none bg-[#212121]/10 dark:bg-[#242424] text-[#212121] dark:text-[#f2f2f2]/50 px-1 py-0.5 text-sm tracking-wider"
-              >
-                {tag}
-              </div>
-            ))}
+            {tags.map((tag, index) => {
+              const color = tagColors[index % tagColors.length];
+              return (
+                <div
+                  key={index}
+                  className={`select-none rounded-full px-2 py-0.5 text-sm tracking-wider ${color.bg} ${color.text}`}
+                >
+                  {tag}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
-      <div className="absolute -bottom-16 w-full border-b-2 border-dashed border-gray-500/30"></div>
     </>
   );
 };

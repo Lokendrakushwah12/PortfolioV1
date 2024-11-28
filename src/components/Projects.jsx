@@ -137,17 +137,17 @@ const Projects = () => {
     <>
       <div className="flex h-full w-full items-start justify-center pb-16 xm:px-2">
         <div className="flex w-full flex-col items-center gap-2">
-          <div className="flex w-full flex-col items-center justify-center gap-4 pt-6">
-            <AnimatePresence>
-              {/* {showTrackBar && (
+          <div className="flex w-full flex-col items-center justify-center gap-4 pt-">
+            {/* <AnimatePresence>
+              {showTrackBar && (
                 <TrackBar
                   projectName={visibleProject}
                   link={link}
                   logo={logo}
                 />
-              )} */}
-            </AnimatePresence>
-            <div className="flex w-full flex-col gap-32">
+              )}
+            </AnimatePresence> */}
+            <div className="flex w-full flex-col gap-8">
               {cardData.map((data, index) => (
                 <div
                   key={index}

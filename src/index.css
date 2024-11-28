@@ -30,13 +30,11 @@ body {
 }
 
 .dark ::selection {
-  background: hsla(0, 0%, 85%, 1);
-  color: #121212;
+  background: hsla(0, 0%, 95%, 0.1);
 }
 
 ::selection {
-  background: hsla(0, 0%, 15%, 1);
-  color: #fbfbfb;
+  background: hsla(0, 0%, 5%, 0.2);
 }
 
 .no-scrollbar::-webkit-scrollbar {
