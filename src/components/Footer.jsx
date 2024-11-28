@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import BlurFadeText from "./BlurFadeText";
 import BlurFade from "./BlurFade";
 import { Link } from "react-router-dom";
@@ -6,24 +6,9 @@ import GitHub from "../assets/logo/GitHub";
 import Twitter from "../assets/logo/Twitter";
 import Linkedin from "../assets/logo/Linkedin";
 
+const LAST_UPDATED_TIME = import.meta.env.VITE_LAST_UPDATED_TIME || "28 Nov 2024, 08:59 IST";
+
 const Footer = () => {
-  const [lastUpdated, setLastUpdated] = useState("");
-
-  useEffect(() => {
-    const now = new Date();
-    const formattedDate = now.toLocaleDateString("en-IN", {
-      year: "numeric",
-      month: "short",
-      day: "2-digit",
-    });
-    const formattedTime = now.toLocaleTimeString("en-IN", {
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-    });
-    setLastUpdated(`${formattedDate}, ${formattedTime} IST`);
-  }, []);
-
   return (
     <div className="flex flex-col">
       <div className="flex items-center justify-between py-4 pt-24 xm:px-2">
@@ -60,7 +45,7 @@ const Footer = () => {
           <BlurFadeText delay={0.45} text="© 2024 — Lokendra Kushwah" />
         </p>
         <p className="text-sm font-[300] leading-5 tracking-tight text-[#b9b9b9] mix-blend-difference dark:text-[#8f8f8f]">
-          <BlurFadeText delay={0.5} text={`Last updated on ${lastUpdated}`} />
+          <BlurFadeText delay={0.5} text={`Last updated on ${LAST_UPDATED_TIME}`} />
         </p>
       </div>
       {/* <BlurFade delay={0.3} className="-z-30">

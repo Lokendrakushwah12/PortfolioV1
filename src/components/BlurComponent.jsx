@@ -47,7 +47,7 @@ const BlurComponent = () => {
   };
 
   return (
-    <div className="fixed bottom-0 z-[40] mx-auto flex w-[200%] items-center justify-center">
+    <div className="fixed bottom-0 z-[40] pointer-events-none select-none mx-auto flex w-[200%] items-center justify-center">
       <div className="relative h-[96px] w-full -translate-x-[25%] overflow-visible rounded-none">
         <div
           className="absolute inset-0 z-10 h-full w-full rounded-none backdrop-blur-none"
